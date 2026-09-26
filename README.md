@@ -1,6 +1,12 @@
-# Portfólio — Rodrigo Otavio
+# Portfólio - Rodrigo Otavio
 
-Meu portfólio pessoal, feito com HTML, CSS e JavaScript puro.
+Meu portfólio pessoal, feito com HTML, CSS e JavaScript. O conteúdo apresenta
+meu momento atual como estudante de Engenharia de Software, minha experiência
+corporativa e projetos de aprendizado com Python.
+
+Parte dos projetos citados foi construída com apoio de ferramentas de IA. O
+portfólio diferencia tecnologias que já uso em exercícios das que ainda estou
+estudando.
 
 ## Rodar localmente
 
