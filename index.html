@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -47,6 +47,8 @@
       <nav class="nav" aria-label="Navegação principal">
         <a href="#sobre">sobre</a>
         <a href="#projetos">projetos</a>
+        <a href="#carreira">carreira</a>
+        <a href="#pitch">pitch</a>
         <a href="#contato">contato</a>
       </nav>
 
@@ -80,14 +82,7 @@
               ver meus projetos
               <span aria-hidden="true">↘</span>
             </a>
-            <a
-              class="button button-quiet"
-              href="https://www.linkedin.com/in/rodrigo-otavio-silvestre-filho/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              falar comigo
-            </a>
+            <a class="button button-quiet" href="#pitch">assistir ao pitch</a>
           </div>
         </div>
 
@@ -106,7 +101,7 @@
   <span class="key">"foco"</span>: [
     <span class="string">"Python"</span>,
     <span class="string">"backend em formação"</span>,
-    <span class="string">"estágio em desenvolvimento"</span>
+    <span class="string">"impacto com tecnologia"</span>
   ],
   <span class="key">"regra"</span>: <span class="string">"entender antes de codar"</span>,
   <span class="key">"status"</span>: <span class="string">"sempre construindo"</span>
@@ -131,15 +126,16 @@
         <div class="manifesto-grid">
           <div class="manifesto-copy reveal">
             <p>
-              Como Jovem Aprendiz, conheci rotinas de Produção e PCP e passei a
-              apoiar demandas de TI envolvendo estações Windows, rede, domínio,
-              impressoras e sistemas internos como TOTVS Protheus e WMC.
+              Na Plásticos do Paraná, comecei como Jovem Aprendiz em rotinas de
+              Produção e PCP e ampliei minha atuação para apoiar demandas de TI:
+              estações Windows, rede, domínio, impressoras e sistemas internos
+              como TOTVS Protheus e WMC.
             </p>
             <p>
-              Também participo de um programa remoto de formação em backend e IA
-              e desenvolvo projetos de estudo. Parte dos projetos mais complexos
-              teve apoio de IA; hoje minha prioridade é entender, testar e
-              modificar o que está no meu GitHub sem depender de código pronto.
+              Em 2026, o programa Jovens Embaixadores Espro fortalece minha
+              comunicação, liderança e visão de impacto. Na tecnologia, desenvolvo
+              projetos de estudo e minha prioridade é entender, testar e explicar
+              cada solução que compartilho.
             </p>
           </div>
 
@@ -163,6 +159,37 @@
         </div>
       </section>
 
+      <section class="journey section" aria-labelledby="trajetoria-title">
+        <div class="section-heading reveal">
+          <p class="section-kicker">/ trajetória profissional</p>
+          <h2 id="trajetoria-title">Experiência que virou direção.</h2>
+          <p>
+            A vivência na indústria me ensinou a observar processos; o Espro
+            ampliou minha voz. Hoje conecto essas duas experiências ao software.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <article class="journey-card reveal">
+            <p class="journey-meta">Plásticos do Paraná · experiência profissional</p>
+            <h3>Do processo industrial ao suporte de TI</h3>
+            <p>
+              Contato com Produção e PCP, organização de rotinas e suporte a
+              usuários e equipamentos. Foi ali que percebi como tecnologia,
+              clareza e melhoria contínua mudam o trabalho das pessoas.
+            </p>
+          </article>
+          <article class="journey-card reveal">
+            <p class="journey-meta">Jovens Embaixadores Espro · 2026</p>
+            <h3>Comunicação, liderança e impacto</h3>
+            <p>
+              Uma experiência para desenvolver protagonismo, ampliar conexões e
+              transformar aprendizados em iniciativas relevantes para outros jovens.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section class="projects section" id="projetos" aria-labelledby="projetos-title">
         <div class="section-heading reveal">
           <p class="section-kicker">/ projetos selecionados</p>
@@ -176,68 +203,69 @@
           <article class="project project-featured reveal" data-accent="rose">
             <div class="project-number">01</div>
             <div class="project-copy">
-              <p class="project-label">Python · API · SQLite</p>
-              <h3>Task API</h3>
+              <p class="project-label">Python · Django REST · PostgreSQL</p>
+              <h3>Lacrei Health API</h3>
               <p>
-                Projeto acadêmico desenvolvido em etapas para praticar CRUD,
-                validação de dados, consultas SQL, códigos HTTP e testes.
+                API REST de estudo para gerenciar profissionais de saúde e
+                consultas. O projeto reúne autenticação, validações, testes e
+                documentação de arquitetura e foi desenvolvido com apoio de IA.
               </p>
               <ul class="tags" aria-label="Tecnologias do projeto">
-                <li>Python</li><li>FastAPI</li><li>SQLite</li><li>Pytest</li>
+                <li>Python</li><li>Django REST</li><li>PostgreSQL</li><li>Docker</li>
               </ul>
             </div>
             <a
               class="project-link"
-              href="https://github.com/r-otavio-dev/task-api"
+              href="https://github.com/r-otavio-dev/lacrei-health-api"
               target="_blank"
               rel="noreferrer"
-              aria-label="Abrir Task API no GitHub"
+              aria-label="Abrir Lacrei Health API no GitHub"
             >↗</a>
           </article>
 
           <article class="project reveal" data-accent="violet">
             <div class="project-number">02</div>
             <div class="project-copy">
-              <p class="project-label">processo · automação · estudo</p>
-              <h3>ERP Big Bags Demo</h3>
+              <p class="project-label">Next.js · TypeScript · produto digital</p>
+              <h3>Conecta Jovem</h3>
               <p>
-                Prova de conceito local e fictícia inspirada em um processo
-                industrial. Uso o projeto para estudar regras de negócio,
-                persistência, logs e automação de navegador.
+                Protótipo responsivo inspirado no Jovens Embaixadores do Espro,
+                com missões, entregas, pontos, portfólio e oportunidades. Uma
+                exploração de produto construída com bastante apoio de IA.
               </p>
               <ul class="tags" aria-label="Tecnologias do projeto">
-                <li>Python</li><li>Flask</li><li>SQLite</li><li>Playwright</li>
+                <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PWA</li>
               </ul>
             </div>
             <a
               class="project-link"
-              href="https://github.com/r-otavio-dev/erp-big-bags-demo"
+              href="https://github.com/r-otavio-dev/conecta-jovem"
               target="_blank"
               rel="noreferrer"
-              aria-label="Abrir ERP Big Bags Demo no GitHub"
+              aria-label="Abrir Conecta Jovem no GitHub"
             >↗</a>
           </article>
 
           <article class="project reveal" data-accent="blue">
             <div class="project-number">03</div>
             <div class="project-copy">
-              <p class="project-label">Python · lógica · fundamentos</p>
-              <h3>Jogo de Adivinhação</h3>
+              <p class="project-label">C · algoritmos · projeto integrador</p>
+              <h3>Biblioteca em C</h3>
               <p>
-                Projeto inicial de terminal para praticar entradas, condicionais,
-                laços e números aleatórios. Mantive o código simples para mostrar
-                a base que estou revisando e os próximos passos de melhoria.
+                Sistema de gerenciamento de acervo e empréstimos desenvolvido
+                para o Projeto Integrador de Algoritmos, aplicando fundamentos de
+                programação e organização de dados em C.
               </p>
               <ul class="tags" aria-label="Tecnologias do projeto">
-                <li>Python</li><li>Lógica</li><li>Condicionais</li><li>Loops</li>
+                <li>C</li><li>Algoritmos</li><li>Estruturas</li><li>Terminal</li>
               </ul>
             </div>
             <a
               class="project-link"
-              href="https://github.com/r-otavio-dev/Jogo-de-Adivinha-o-python"
+              href="https://github.com/r-otavio-dev/biblioteca-c-projeto-integrador"
               target="_blank"
               rel="noreferrer"
-              aria-label="Abrir Jogo de Adivinhação no GitHub"
+              aria-label="Abrir Biblioteca em C no GitHub"
             >↗</a>
           </article>
         </div>
@@ -270,6 +298,90 @@
           <li><span>FastAPI + Django REST</span><small>em estudo</small></li>
           <li><span>n8n</span><small>contato com automação</small></li>
         </ul>
+      </section>
+
+      <section class="career section" id="carreira" aria-labelledby="carreira-title">
+        <div class="section-heading reveal">
+          <p class="section-kicker">/ plano de carreira</p>
+          <h2 id="carreira-title">Crescer com base, prática e pessoas.</h2>
+          <p>
+            Meu objetivo é entrar na área de desenvolvimento, consolidar backend
+            e evoluir de forma contínua, sem pular os fundamentos.
+          </p>
+        </div>
+
+        <ol class="career-steps reveal">
+          <li>
+            <span>agora</span>
+            <div>
+              <h3>Consolidar fundamentos</h3>
+              <p>Fortalecer Python, lógica, Git, SQL, APIs e testes com projetos explicáveis.</p>
+            </div>
+          </li>
+          <li>
+            <span>próximos 12 meses</span>
+            <div>
+              <h3>Conquistar experiência em desenvolvimento</h3>
+              <p>Atuar em estágio ou posição inicial, aprender com revisão de código e contribuir em entregas reais.</p>
+            </div>
+          </li>
+          <li>
+            <span>médio prazo</span>
+            <div>
+              <h3>Evoluir em backend e sistemas úteis</h3>
+              <p>Aprofundar arquitetura, bancos de dados, segurança e automação para resolver problemas de negócio.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="networking reveal">
+          <div>
+            <p class="section-kicker">/ networking e posicionamento</p>
+            <h3>Aprender em público, com honestidade.</h3>
+          </div>
+          <ul>
+            <li>Compartilhar aprendizados e evolução dos projetos no LinkedIn.</li>
+            <li>Manter GitHub, READMEs e portfólio coerentes com meu nível atual.</li>
+            <li>Participar de comunidades, eventos e conversas com profissionais da área.</li>
+            <li>Cultivar conexões do Espro, da faculdade e do ambiente profissional.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="pitch section"
+        id="pitch"
+        aria-labelledby="pitch-title"
+        data-youtube-url="https://youtube.com/shorts/bAWqbX_wMYg?is=G_Jtdy-Fkd5zZWaU"
+      >
+        <div class="pitch-copy reveal">
+          <p class="section-kicker">/ pitch profissional</p>
+          <h2 id="pitch-title">Minha trajetória em até 3 minutos.</h2>
+          <p>
+            Uma apresentação direta sobre minha experiência, meus projetos e o
+            próximo passo que busco na área de tecnologia.
+          </p>
+          <div class="pitch-status">
+            <span class="pitch-status-dot" aria-hidden="true"></span>
+            <span id="pitch-status-text">vídeo em preparação</span>
+          </div>
+          <a
+            class="pitch-link"
+            id="pitch-video-link"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            hidden
+          >abrir no YouTube ↗</a>
+        </div>
+
+        <div class="video-shell reveal" id="video-player" aria-live="polite">
+          <div class="video-placeholder">
+            <span class="play-mark" aria-hidden="true">▶</span>
+            <p>O vídeo será disponibilizado aqui.</p>
+            <small>Sem link fictício: aguardando a publicação do pitch.</small>
+          </div>
+        </div>
       </section>
 
       <section class="contact section" id="contato" aria-labelledby="contato-title">

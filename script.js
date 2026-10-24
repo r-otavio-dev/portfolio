@@ -5,6 +5,10 @@ const cursorLight = document.querySelector(".cursor-light");
 const typedCommand = document.querySelector("#typed-command");
 const year = document.querySelector("#current-year");
 const revealItems = document.querySelectorAll(".reveal");
+const pitchSection = document.querySelector(".pitch");
+const videoPlayer = document.querySelector("#video-player");
+const pitchStatusText = document.querySelector("#pitch-status-text");
+const pitchVideoLink = document.querySelector("#pitch-video-link");
 
 const moods = ["default", "deep", "electric"];
 let currentMood = 0;
@@ -57,6 +61,46 @@ function revealOnScroll() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
+function getYouTubeId(url) {
+  if (!url) return null;
+
+  try {
+    const parsedUrl = new URL(url);
+    const host = parsedUrl.hostname.replace("www.", "");
+
+    if (host === "youtu.be") return parsedUrl.pathname.split("/")[1] || null;
+    if (!host.endsWith("youtube.com")) return null;
+
+    if (parsedUrl.pathname === "/watch") return parsedUrl.searchParams.get("v");
+
+    const [, type, id] = parsedUrl.pathname.split("/");
+    return ["embed", "shorts", "live"].includes(type) ? id || null : null;
+  } catch {
+    return null;
+  }
+}
+
+function loadPitchVideo() {
+  if (!pitchSection || !videoPlayer) return;
+
+  const url = pitchSection.dataset.youtubeUrl.trim();
+  const videoId = getYouTubeId(url);
+  if (!videoId) return;
+
+  const iframe = document.createElement("iframe");
+  iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}`;
+  iframe.title = "Pitch profissional de Rodrigo Otavio";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
+
+  videoPlayer.replaceChildren(iframe);
+  pitchSection.classList.add("has-video");
+  pitchStatusText.textContent = "vídeo publicado";
+  pitchVideoLink.href = url;
+  pitchVideoLink.hidden = false;
+}
+
 moodButton.addEventListener("click", changeMood);
 window.addEventListener("pointermove", followPointer, { passive: true });
 window.addEventListener("pointerleave", () => {
@@ -66,3 +110,4 @@ window.addEventListener("pointerleave", () => {
 year.textContent = new Date().getFullYear();
 typeCommand();
 revealOnScroll();
+loadPitchVideo();
